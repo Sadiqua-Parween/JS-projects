@@ -1,289 +1,290 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My JavaScript Projects</title>
-  <style>
-    * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: system-ui, sans-serif;
-}
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sadiqua | JavaScript Projects</title>
 
-body {
-  background: #0f172a;
-  color: #e5e7eb;
-  line-height: 1.6;
-}
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: system-ui, sans-serif;
+      }
 
-header {
-  text-align: center;
-  padding: 3rem 1rem;
-}
+      body {
+        background: #0f172a;
+        color: #e5e7eb;
+        line-height: 1.6;
+      }
 
-header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-}
+      header {
+        text-align: center;
+        padding: 3rem 1rem;
+      }
 
-header p {
-  color: #94a3b8;
-}
+      header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+      }
 
-.projects {
-  max-width: 1200px;
-  margin: auto;
-  padding: 2rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
-}
+      header p {
+        color: #94a3b8;
+      }
 
-.card {
-  background: #020617;
-  padding: 1.5rem;
-  border-radius: 12px;
-  transition: transform 0.3s, box-shadow 0.3s;
-  border: 1px solid #1e293b;
-}
+      .projects {
+        max-width: 1200px;
+        margin: auto;
+        padding: 2rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 1.5rem;
+      }
 
-.card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 15px 30px rgba(0,0,0,0.4);
-}
+      .card {
+        background: #020617;
+        padding: 1.5rem;
+        border-radius: 12px;
+        border: 1px solid #1e293b;
+        transition:
+          transform 0.3s,
+          box-shadow 0.3s;
+      }
 
-.card h3 {
-  margin-bottom: 0.4rem;
-}
+      .card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+      }
 
-.card p {
-  font-size: 0.9rem;
-  color: #9ca3af;
-  margin-bottom: 1rem;
-}
+      .card h3 {
+        margin-bottom: 0.4rem;
+      }
 
-.btn {
-  display: inline-block;
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-  background: linear-gradient(135deg, #6366f1, #22d3ee);
-  color: #020617;
-  border-radius: 8px;
-  font-weight: 600;
-  transition: opacity 0.2s;
-}
+      .card p {
+        font-size: 0.9rem;
+        color: #9ca3af;
+        margin-bottom: 0.3rem;
+      }
 
-.btn:hover {
-  opacity: 0.85;
-}
+      .date {
+        font-size: 0.75rem;
+        color: #64748b;
+        margin-bottom: 1rem;
+      }
 
-footer {
-  text-align: center;
-  padding: 2rem;
-  color: #64748b;
-  font-size: 0.85rem;
-}
+      .btn {
+        display: inline-block;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        background: linear-gradient(135deg, #6366f1, #22d3ee);
+        color: #020617;
+        border-radius: 8px;
+        font-weight: 600;
+      }
 
-  </style>
-</head>
-<body>
+      footer {
+        text-align: center;
+        padding: 2rem;
+        color: #64748b;
+        font-size: 0.85rem;
+      }
+    </style>
+  </head>
 
-  <header>
-    <h1>🚀 Sadiqua's Projects</h1>
-    <p>30 Projects · Core JS → Advanced APIs</p>
-  </header>
+  <body>
+    <header>
+      <h1>🚀 Sadiqua's JavaScript Projects</h1>
+    </header>
 
-  <main class="projects">
+    <main class="projects">
+      <!-- BASIC → INTERMEDIATE -->
+      <div class="card">
+        <h3>Calculator</h3>
+        <p>Keyboard + Mouse</p>
+        <p class="date">📅 01 Feb 2026</p>
+        <a class="btn" href="calculator.html">View</a>
+      </div>
+      <div class="card">
+        <h3>Number Guessing Game</h3>
+        <p>Random logic</p>
+        <p class="date">📅 06 Jan 2026</p>
+        <a class="btn" href="number-guessing.html">View</a>
+      </div>
+      <div class="card">
+        <h3>Rock Paper Scissors</h3>
+        <p>Game logic</p>
+        <p class="date">📅 07 Jan 2026</p>
+        <a class="btn" href="#">View</a>
+      </div>
+      <div class="card">
+        <h3>Clock · Stopwatch · Timer</h3>
+        <p>Time APIs</p>
+        <p class="date">📅 08 Jan 2026</p>
+        <a class="btn" href="#">View</a>
+      </div>
+      <div class="card">
+        <h3>Form Validator</h3>
+        <p>Email & regex</p>
+        <p class="date">📅 09 Jan 2026</p>
+        <a class="btn" href="#">View</a>
+      </div>
+      <div class="card">
+        <h3>String Utility App</h3>
+        <p>Reverse & palindrome</p>
+        <p class="date">📅 10 Jan 2026</p>
+        <a class="btn" href="#">View</a>
+      </div>
+      <div class="card">
+        <h3>Array Methods Visualizer</h3>
+        <p>map · filter · reduce</p>
+        <p class="date">📅 11 Jan 2026</p>
+        <a class="btn" href="#">View</a>
+      </div>
+      <div class="card">
+        <h3>Password Generator</h3>
+        <p>Secure randomness</p>
+        <p class="date">📅 12 Jan 2026</p>
+        <a class="btn" href="#">View</a>
+      </div>
+      <div class="card">
+        <h3>Color & Gradient Generator</h3>
+        <p>Live preview</p>
+        <p class="date">📅 13 Jan 2026</p>
+        <a class="btn" href="#">View</a>
+      </div>
+      <div class="card">
+        <h3>UI Components</h3>
+        <p>Modal · Tooltip</p>
+        <p class="date">📅 14 Jan 2026</p>
+        <a class="btn" href="#">View</a>
+      </div>
 
-    <!-- PROJECT CARD TEMPLATE -->
-    <!-- Change href="#" to your project link -->
-    <div class="card">
-      <h3>Calculator</h3>
-      <p>Keyboard + Mouse support</p>
-      <a href="calculator.html" class="btn">View Project</a>
-    </div>
+      <!-- CRUD / STATE -->
+      <div class="card">
+        <h3>To-Do App</h3>
+        <p>CRUD + storage</p>
+        <p class="date">📅 15 Jan 2026</p>
+        <a class="btn" href="#">View</a>
+      </div>
+      <div class="card">
+        <h3>Notes App</h3>
+        <p>Keep clone</p>
+        <p class="date">📅 16 Jan 2026</p>
+        <a class="btn" href="#">View</a>
+      </div>
+      <div class="card">
+        <h3>Expense Tracker</h3>
+        <p>Charts</p>
+        <p class="date">📅 17 Jan 2026</p>
+        <a class="btn" href="#">View</a>
+      </div>
+      <div class="card">
+        <h3>Quiz Engine</h3>
+        <p>Dynamic flow</p>
+        <p class="date">📅 18 Jan 2026</p>
+        <a class="btn" href="#">View</a>
+      </div>
+      <div class="card">
+        <h3>Image Carousel</h3>
+        <p>Slider</p>
+        <p class="date">📅 19 Jan 2026</p>
+        <a class="btn" href="#">View</a>
+      </div>
+      <div class="card">
+        <h3>Infinite Scroll</h3>
+        <p>Lazy load</p>
+        <p class="date">📅 20 Jan 2026</p>
+        <a class="btn" href="#">View</a>
+      </div>
+      <div class="card">
+        <h3>Pagination System</h3>
+        <p>Client-side</p>
+        <p class="date">📅 21 Jan 2026</p>
+        <a class="btn" href="#">View</a>
+      </div>
+      <div class="card">
+        <h3>Theme Switcher</h3>
+        <p>Dark/Light</p>
+        <p class="date">📅 22 Jan 2026</p>
+        <a class="btn" href="#">View</a>
+      </div>
 
-    <div class="card">
-      <h3>Number Guessing Game</h3>
-      <p>Logic + randomization</p>
-      <a href="#" class="btn">View Project</a>
-    </div>
+      <!-- ADVANCED / APIs -->
+      <div class="card">
+        <h3>File Upload & Preview</h3>
+        <p>Validation</p>
+        <p class="date">📅 23 Jan 2026</p>
+        <a class="btn" href="#">View</a>
+      </div>
+      <div class="card">
+        <h3>Drag & Drop List</h3>
+        <p>Reorder</p>
+        <p class="date">📅 24 Jan 2026</p>
+        <a class="btn" href="#">View</a>
+      </div>
+      <div class="card">
+        <h3>Weather App</h3>
+        <p>API fetch</p>
+        <p class="date">📅 25 Jan 2026</p>
+        <a class="btn" href="#">View</a>
+      </div>
+      <div class="card">
+        <h3>Currency Converter</h3>
+        <p>Live rates</p>
+        <p class="date">📅 26 Jan 2026</p>
+        <a class="btn" href="#">View</a>
+      </div>
+      <div class="card">
+        <h3>News Aggregator</h3>
+        <p>Multiple APIs</p>
+        <p class="date">📅 27 Jan 2026</p>
+        <a class="btn" href="#">View</a>
+      </div>
+      <div class="card">
+        <h3>Movie Search App</h3>
+        <p>Search engine</p>
+        <p class="date">📅 28 Jan 2026</p>
+        <a class="btn" href="#">View</a>
+      </div>
+      <div class="card">
+        <h3>GitHub Profile Viewer</h3>
+        <p>REST API</p>
+        <p class="date">📅 29 Jan 2026</p>
+        <a class="btn" href="#">View</a>
+      </div>
+      <div class="card">
+        <h3>REST Client</h3>
+        <p>Postman-lite</p>
+        <p class="date">📅 30 Jan 2026</p>
+        <a class="btn" href="#">View</a>
+      </div>
+      <div class="card">
+        <h3>Debounced Search</h3>
+        <p>Performance</p>
+        <p class="date">📅 31 Jan 2026</p>
+        <a class="btn" href="#">View</a>
+      </div>
+      <div class="card">
+        <h3>Auto-Complete Engine</h3>
+        <p>Suggestions & caching</p>
+        <p class="date">📅 31 Jan 2026</p>
+        <a href="#" class="btn">View</a>
+      </div>
+      <div class="card">
+        <h3>Retry & Fallback</h3>
+        <p>Resilient API calls</p>
+        <p class="date">📅 31 Jan 2026</p>
+        <a href="#" class="btn">View</a>
+      </div>
+      <div class="card">
+        <h3>API Caching Layer</h3>
+        <p>Memory + LS</p>
+        <p class="date">📅 01 Feb 2026</p>
+        <a class="btn" href="#">View</a>
+      </div>
+    </main>
 
-    <div class="card">
-      <h3>Rock Paper Scissors</h3>
-      <p>Game logic & UI states</p>
-      <a href="#" class="btn">View Project</a>
-    </div>
-
-    <div class="card">
-      <h3>Clock · Stopwatch · Timer</h3>
-      <p>Time APIs & intervals</p>
-      <a href="#" class="btn">View Project</a>
-    </div>
-
-    <div class="card">
-      <h3>Form Validator</h3>
-      <p>Email, password & regex</p>
-      <a href="#" class="btn">View Project</a>
-    </div>
-
-    <div class="card">
-      <h3>String Utility App</h3>
-      <p>Reverse · Palindrome · Anagram</p>
-      <a href="#" class="btn">View Project</a>
-    </div>
-
-    <div class="card">
-      <h3>Array Methods Visualizer</h3>
-      <p>map · filter · reduce</p>
-      <a href="#" class="btn">View Project</a>
-    </div>
-
-    <div class="card">
-      <h3>Password Generator</h3>
-      <p>Secure random passwords</p>
-      <a href="#" class="btn">View Project</a>
-    </div>
-
-    <div class="card">
-      <h3>Color & Gradient Generator</h3>
-      <p>Pickers & live preview</p>
-      <a href="#" class="btn">View Project</a>
-    </div>
-
-    <div class="card">
-      <h3>UI Components</h3>
-      <p>Modal · Dropdown · Tooltip</p>
-      <a href="#" class="btn">View Project</a>
-    </div>
-
-    <div class="card">
-      <h3>To-Do App</h3>
-      <p>CRUD + localStorage</p>
-      <a href="#" class="btn">View Project</a>
-    </div>
-
-    <div class="card">
-      <h3>Notes App</h3>
-      <p>Google Keep clone</p>
-      <a href="#" class="btn">View Project</a>
-    </div>
-
-    <div class="card">
-      <h3>Expense Tracker</h3>
-      <p>Charts & persistence</p>
-      <a href="#" class="btn">View Project</a>
-    </div>
-
-    <div class="card">
-      <h3>Quiz Engine</h3>
-      <p>Dynamic questions & score</p>
-      <a href="#" class="btn">View Project</a>
-    </div>
-
-    <div class="card">
-      <h3>Image Carousel</h3>
-      <p>Slider with controls</p>
-      <a href="#" class="btn">View Project</a>
-    </div>
-
-    <div class="card">
-      <h3>Infinite Scroll</h3>
-      <p>Lazy loading system</p>
-      <a href="#" class="btn">View Project</a>
-    </div>
-
-    <div class="card">
-      <h3>Pagination System</h3>
-      <p>Client-side pagination</p>
-      <a href="#" class="btn">View Project</a>
-    </div>
-
-    <div class="card">
-      <h3>Theme Switcher</h3>
-      <p>Dark · Light · System</p>
-      <a href="#" class="btn">View Project</a>
-    </div>
-
-    <div class="card">
-      <h3>File Upload & Preview</h3>
-      <p>Images & validation</p>
-      <a href="#" class="btn">View Project</a>
-    </div>
-
-    <div class="card">
-      <h3>Drag & Drop List</h3>
-      <p>Reorderable items</p>
-      <a href="#" class="btn">View Project</a>
-    </div>
-
-    <div class="card">
-      <h3>Weather App</h3>
-      <p>API-based forecasts</p>
-      <a href="#" class="btn">View Project</a>
-    </div>
-
-    <div class="card">
-      <h3>Currency Converter</h3>
-      <p>Live exchange rates</p>
-      <a href="#" class="btn">View Project</a>
-    </div>
-
-    <div class="card">
-      <h3>News Aggregator</h3>
-      <p>Multiple sources</p>
-      <a href="#" class="btn">View Project</a>
-    </div>
-
-    <div class="card">
-      <h3>Movie Search App</h3>
-      <p>OMDb-style search</p>
-      <a href="#" class="btn">View Project</a>
-    </div>
-
-    <div class="card">
-      <h3>GitHub Profile Viewer</h3>
-      <p>Fetch GitHub API</p>
-      <a href="#" class="btn">View Project</a>
-    </div>
-
-    <div class="card">
-      <h3>REST Client</h3>
-      <p>Postman-lite</p>
-      <a href="#" class="btn">View Project</a>
-    </div>
-
-    <div class="card">
-      <h3>Debounced Search</h3>
-      <p>Performance optimization</p>
-      <a href="#" class="btn">View Project</a>
-    </div>
-
-    <div class="card">
-      <h3>Auto-Complete Engine</h3>
-      <p>Suggestions & caching</p>
-      <a href="#" class="btn">View Project</a>
-    </div>
-
-    <div class="card">
-      <h3>Retry & Fallback</h3>
-      <p>Resilient API calls</p>
-      <a href="#" class="btn">View Project</a>
-    </div>
-
-    <div class="card">
-      <h3>API Caching Layer</h3>
-      <p>Memory + localStorage</p>
-      <a href="#" class="btn">View Project</a>
-    </div>
-
-  </main>
-
-  <footer>
-    <p>© 2026 · Built with ❤️ & JavaScript</p>
-  </footer>
-
-</body>
+    <footer>© 2026 · Built with ❤️ & JavaScript</footer>
+  </body>
 </html>

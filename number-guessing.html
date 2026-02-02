@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Number Guessing Game</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        font-family: "Segoe UI", sans-serif;
+      }
+
+      body {
+        margin: 0;
+        height: 100vh;
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .game-container {
+        background: #ffffff;
+        width: 360px;
+        padding: 25px;
+        border-radius: 16px;
+        text-align: center;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+      }
+
+      .game-container h1 {
+        margin-bottom: 8px;
+      }
+
+      .subtitle {
+        color: #555;
+        margin-bottom: 20px;
+      }
+
+      .stats {
+        margin-bottom: 15px;
+        font-size: 14px;
+        color: #333;
+      }
+
+      input {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+        border-radius: 8px;
+        border: 2px solid #ddd;
+        outline: none;
+        margin-bottom: 12px;
+      }
+
+      input:focus {
+        border-color: #667eea;
+      }
+
+      button {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+        border: none;
+        border-radius: 8px;
+        background: #667eea;
+        color: white;
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
+
+      button:hover {
+        background: #5a67d8;
+      }
+
+      .message {
+        margin-top: 15px;
+        font-size: 16px;
+        min-height: 24px;
+      }
+
+      .history {
+        margin-top: 20px;
+        background: #f5f5f5;
+        padding: 12px;
+        border-radius: 10px;
+        font-size: 14px;
+      }
+
+      .reset-btn {
+        margin-top: 15px;
+        background: #ff7675;
+      }
+
+      .reset-btn:hover {
+        background: #e17055;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="game-container">
+      <h1>🎯 Number Guessing Game</h1>
+      <p class="subtitle">
+        Guess the number between <strong>1 and 100</strong>
+      </p>
+
+      <div class="stats">
+        <span>Attempts: <strong id="attempts">0</strong>/10</span>
+      </div>
+
+      <input
+        type="number"
+        id="guessInput"
+        placeholder="Enter your guess"
+        min="1"
+        max="100"
+      />
+
+      <button id="guessBtn">Guess</button>
+
+      <p class="message" id="message">Start guessing... 🤔</p>
+
+      <div class="history">
+        <h3>Previous Guesses</h3>
+        <p id="guessHistory">None</p>
+      </div>
+
+      <button class="reset-btn" id="resetBtn">🔄 Play Again</button>
+    </div>
+    <script>
+      let randomNumber = Math.floor(Math.random() * 100) + 1;
+      console.log("Random Number is:", randomNumber);
+
+      let input = document.getElementById("guessInput");
+      input.focus();
+
+      let button = document.getElementById("guessBtn");
+      button.addEventListener("click", guessNumber);
+      input.addEventListener("keydown", (e) => {
+        if (e.key === "Enter") {
+          guessNumber();
+        }
+      });
+
+      let message = document.getElementById("message");
+      let attempts = document.getElementById("attempts");
+      let history = document.getElementById("guessHistory");
+      let reset = document.getElementById("resetBtn");
+
+      reset.addEventListener("click", () => {
+        attempts.textContent = "0";
+        message.textContent = "Start guessing... 🤔";
+        input.disabled = false;
+        button.disabled = false;
+        input.focus();
+        history.textContent = "None";
+        reset.style.backgroundColor = "#ff7675";
+        randomNumber = Math.floor(Math.random() * 100) + 1;
+        console.log("Random Number is:", randomNumber);
+      });
+
+      function guessNumber() {
+        if (attempts.textContent == 0) {
+          history.textContent = "";
+        }
+        let value = input.value;
+        if (value == "") {
+          message.textContent = "No input given";
+        } else if (value > 100 || value < 1) {
+          message.textContent = "Not in range";
+        } else if (Number(attempts.textContent) < 10) {
+          attempts.textContent = Number(attempts.textContent) + 1;
+
+          history.textContent += value + ", ";
+
+          if (value < randomNumber) {
+            message.textContent = "Too low";
+            input.value = "";
+            // input.focus();
+          } else if (value > randomNumber) {
+            message.textContent = "Too High";
+            input.value = "";
+            // input.focus();
+          } else {
+            message.textContent = "Correct ✅ You Win!!";
+            input.disabled = true;
+            button.disabled = true;
+            input.value = "";
+            reset.style.backgroundColor = "green";
+          }
+        } else {
+          input.disabled = true;
+          button.disabled = true;
+          message.textContent = "Game Over!!";
+        }
+      }
+    </script>
+  </body>
+</html>
