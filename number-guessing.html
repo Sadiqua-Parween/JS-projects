@@ -104,7 +104,7 @@
       </p>
 
       <div class="stats">
-        <span>Attempts: <strong id="attempts">0</strong>/10</span>
+        <span>Attempts: <strong id="attempts">0</strong>/5</span>
       </div>
 
       <input
@@ -126,6 +126,11 @@
 
       <button class="reset-btn" id="resetBtn">🔄 Play Again</button>
     </div>
+
+
+
+
+
     <script>
       let randomNumber = Math.floor(Math.random() * 100) + 1;
       console.log("Random Number is:", randomNumber);
@@ -167,7 +172,7 @@
           message.textContent = "No input given";
         } else if (value > 100 || value < 1) {
           message.textContent = "Not in range";
-        } else if (Number(attempts.textContent) < 10) {
+        } else if (Number(attempts.textContent) < 5) {
           attempts.textContent = Number(attempts.textContent) + 1;
 
           history.textContent += value + ", ";
@@ -194,5 +199,8 @@
         }
       }
     </script>
+
+
+
   </body>
 </html>

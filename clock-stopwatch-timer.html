@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Clock · Stopwatch · Timer</title>
+  
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app {
+  background: #fff;
+  width: 360px;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 22px;
+  color: #333;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.tab {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  background: #eee;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.tab.active {
+  background: #667eea;
+  color: #fff;
+}
+
+/* Panels */
+.panel {
+  display: none;
+}
+
+.panel.active {
+  display: block;
+}
+
+/* Time Display */
+.time-display {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 15px 0;
+  color: #333;
+}
+
+.date-display {
+  font-size: 14px;
+  color: #777;
+}
+
+/* Controls */
+.controls {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.controls button {
+  flex: 1;
+  margin: 0 5px;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: #667eea;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.controls button:hover {
+  opacity: 0.9;
+}
+
+.controls .danger {
+  background: #e74c3c;
+}
+
+/* Timer Inputs */
+.inputs {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.inputs input {
+  width: 30%;
+  padding: 8px;
+  font-size: 16px;
+  text-align: center;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+}
+
+  </style>
+</head>
+<body>
+
+  <div class="app">
+
+    <h1>⏱ Time Utility</h1>
+
+    <!-- Tabs -->
+    <div class="tabs">
+      <button id="clockBtn" data-panel="clock" class="tab active">Clock</button>
+      <button id="stopwatchBtn" data-panel="stopwatch" class="tab">Stopwatch</button>
+      <button id="timerBtn" data-panel="timer" class="tab">Timer</button>
+    </div>
+
+    <!-- Clock -->
+    <div id="clock" class="panel active">
+      <div class="time-display">12:45:30 PM</div>
+      <div class="date-display">Monday, 1 January 2026</div>
+    </div>
+
+    <!-- Stopwatch -->
+    <div id="stopwatch" class="panel">
+      <div class="time-display">00:00:00</div>
+      <div class="controls">
+        <button>Start</button>
+        <button>Pause</button>
+        <button class="danger">Reset</button>
+      </div>
+    </div>
+
+    <!-- Timer -->
+    <div id="timer" class="panel">
+      <div class="inputs">
+        <input type="number" placeholder="HH">
+        <input type="number" placeholder="MM">
+        <input type="number" placeholder="SS">
+      </div>
+
+      <div class="time-display">00:00:00</div>
+
+      <div class="controls">
+        <button>Start</button>
+        <button>Pause</button>
+        <button class="danger">Reset</button>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+
+
+    let tabs = document.getElementsByClassName("tab");
+    let panels = document.getElementsByClassName("panel");
+
+    for(let tab of tabs){
+      tab.addEventListener("click" , active);
+    }
+
+    function active(e){
+      for(let tab of tabs){
+      tab.classList.remove("active");
+      }
+      for(let panel of panels){
+        panel.classList.remove("active")
+      }
+      e.currentTarget.classList.add("active");
+      let panel = e.currentTarget.dataset.panel;
+      document.getElementById(panel).classList.add("active");
+
+    }
+
+
+    let date = new Date(hour)
+    console.log(date)
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promise</title>
+  </head>
+  <body>
+    <script>
+      function walkthedog(){
+          return new Promise((resolve , reject)=>{
+              setTimeout(() => {
+                const walkthedog = true;
+                  if (walkthedog){
+                     resolve("you walk the dog")
+                     }
+                 else{
+                     reject("you didnt walk the dog")
+                     } 
+              }, 1500)
+          })
+      }
+
+      function cleantheroom(){
+          return new Promise((resolve , reject)=>{
+              setTimeout(() => {
+                const cleantheroom = true;
+                
+                  if (cleantheroom){
+                      resolve("you clean the room")
+                     }
+                 else{
+                     reject("you didnt clean the room")
+                     } 
+
+              }, 2500)
+          })
+      }
+
+      function didthedishes(){
+          return new Promise((resolve , reject)=>{
+              setTimeout(() => {
+                const didthedishes = true;
+
+                  if (didthedishes){
+                     resolve("you did the dishes")
+                     }
+                 else{
+                     reject("you didnt did the dishes")
+                     } 
+
+              }, 2000)
+          })
+      }
+
+
+      walkthedog().then(value => {console.log(value); return cleantheroom()})
+                  .then(value => {console.log(value); return didthedishes()})
+                  .then(value => {console.log(value); console.log("you did all the tasks")})
+                  .catch(error => console.error());
+
+
+
+
+
+    //   async function dochores(){
+    //       const walkthedog = await walkthedog();
+
+    //   }
+    </script>
+  </body>
+</html>

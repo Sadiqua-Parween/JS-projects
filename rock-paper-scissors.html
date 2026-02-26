@@ -182,36 +182,29 @@
         ComputerMove.textContent = computer;
         if (choice === computer) {
           result.textContent = "Tie";
-          // computer = choises[Math.floor(Math.random() * 3)];
           console.log(computer);
         } else if (choice === "rock" && computer === "scissors") {
           result.textContent = "Win🏅";
-          // computer = choises[Math.floor(Math.random() * 3)];
           playerScore.textContent = Number(playerScore.textContent) + 1;
           console.log(computer);
         } else if (choice === "rock" && computer === "paper") {
           result.textContent = "Lose 🤡";
-          // computer = choises[Math.floor(Math.random() * 3)];
           computerScore.textContent = Number(computerScore.textContent) + 1;
           console.log(computer);
         } else if (choice === "paper" && computer === "scissors") {
           result.textContent = "Lose 🤡";
-          // computer = choises[Math.floor(Math.random() * 3)];
           computerScore.textContent = Number(computerScore.textContent) + 1;
           console.log(computer);
         } else if (choice === "paper" && computer === "rock") {
           result.textContent = "Win🏅";
-          // computer = choises[Math.floor(Math.random() * 3)];
           playerScore.textContent = Number(playerScore.textContent) + 1;
           console.log(computer);
         } else if (choice === "scissors" && computer === "paper") {
           result.textContent = "Win🏅";
-          // computer = choises[Math.floor(Math.random() * 3)];
           playerScore.textContent = Number(playerScore.textContent) + 1;
           console.log(computer);
         } else if (choice === "scissors" && computer === "rock") {
           result.textContent = "Lose 🤡";
-          // computer = choises[Math.floor(Math.random() * 3)];
           computerScore.textContent = Number(computerScore.textContent) + 1;
           console.log(computer);
         } else {
